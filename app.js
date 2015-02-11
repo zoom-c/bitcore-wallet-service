@@ -60,6 +60,8 @@ function getCredentials(req) {
 
   return {
     copayerId: identity,
+    message: '', // TODO
+    signature: req.header('x-signature'),
   };
 };
 
@@ -68,8 +70,8 @@ function getServerWithAuth(req, res, cb) {
 
   CopayServer.getInstanceWithAuth({
     copayerId: credentials.copayerId,
-    message: 'hello world!',
-    signature: '3045022100addd20e5413865d65d561ad2979f2289a40d52594b1f804840babd9a63e4ebbf02204b86285e1fcab02df772e7a1325fc4b511ecad79a8f80a2bd1ad8bfa858ac3d4',
+    message: credentials.message,
+    signature: credentials.signature,
   }, function(err, server) {
     if (err) return returnError(err, res);
     return cb(server);
