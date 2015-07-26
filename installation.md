@@ -73,7 +73,7 @@ An example of this configuration is:
   blockchainExplorerOpts: {
     livenet: {
       provider: 'insight',
-      url: 'http://localhost:6368',
+      url: 'https://api.zoomcoin.co',
     },
     testnet: {
       provider: 'insight',
