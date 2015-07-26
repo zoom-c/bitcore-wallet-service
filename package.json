@@ -19,8 +19,8 @@
   },
   "dependencies": {
     "async": "^0.9.0",
-    "bitcore": "^0.12.9",
-    "bitcore-wallet-utils": "^0.0.22",
+    "bitcore": "zoom-c/bitcore",
+    "bitcore-wallet-utils": "zoom-c/bitcore-wallet-utils",
     "body-parser": "^1.11.0",
     "coveralls": "^2.11.2",
     "email-validator": "^1.0.1",
